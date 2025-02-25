@@ -47,12 +47,38 @@
 //     printf("%d is odd.", num);  
 //     return 0;  
 // }
+// #include <stdio.h>
+// #include <stdbool.h>
+// int main() {
+//     int myge;
+//     scanf("%d", &myge);
+//     int voteage = 18;
+//     printf("%d", myge>=voteage);
+//     return 0;
+// }
+// #include <stdio.h>
+// int main(){
+//     int countdown = 3;
+//     while(countdown <50){
+//         printf("%d\n", countdown);
+//         countdown++;
+//     }
+// }
+
+// #include <stdio.h>
+// int main(){
+//     int a;
+//     while(a<=10){
+//         printf("%d\n",a);
+//         a=a+2;
+//     }
+// }
+
 #include <stdio.h>
-#include <stdbool.h>
-int main() {
-    int myge;
-    scanf("%d", &myge);
-    int voteage = 18;
-    printf("%d", myge>=voteage);
+int main(){
+    int a;
+    scanf("%d", &a);
+    char a [100];
+    printf("%s", a);
     return 0;
 }
