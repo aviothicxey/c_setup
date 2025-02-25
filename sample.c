@@ -74,11 +74,28 @@
 //     }
 // }
 
+// #include <stdio.h>
+// int main(){
+// int dice = 1;
+// while(dice<=6){
+// if(dice < 6){
+//     printf("no yayzy\n");
+// } else{
+//     printf("yayzy!\n");
+// }
+// dice = dice +1;
+// }
+//     return 0;
+// }
 #include <stdio.h>
 int main(){
-    int a;
-    scanf("%d", &a);
-    char a [100];
-    printf("%s", a);
+    int i ,j;
+    for (i = 1; i<= 2; ++i){
+        printf("Outer: %d\n",i);
+    
+    for (j = 1; j<=3 ; ++j){
+        printf("inner : %d\n",j);
+    }
+}
     return 0;
 }
