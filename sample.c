@@ -128,12 +128,24 @@
 //     return 0;
 // }
 
+// #include <stdio.h>
+// int main(){
+//     int i;
+//     int number;
+//     scanf("%d",&number);
+//     for(i=1;i<=10;i++){
+//         printf("%d x %d = %d\n",number,i,number*i);
+//     }
+//     return 0;
+// }
+
 #include <stdio.h>
 int main(){
-    int i;
-    int number;
-    scanf("%d",&number);
-    for(i=1;i<=10;i++){
-        printf("%d x %d = %d\n",number,i,number*i);
+    int i ;
+    for (i=0;i<10;i++){
+        if (i==4){
+            break;
+        }
+        printf("%d\n",i);
     }
 }
