@@ -110,11 +110,30 @@
 //     return 0;
 // }
 
+// #include <stdio.h>
+// int main(){
+//     int i;
+//     for (i=1;i<=50;i=i+2){
+//         printf("%d\n",i);
+//     }
+//     return 0;
+// }
+
+// #include <stdio.h>
+// int main(){
+//     int i;
+//     for (i=2;i<=512;i=i*2){
+//         printf("%d\n",i);
+//     }
+//     return 0;
+// }
+
 #include <stdio.h>
 int main(){
     int i;
-    for (i=1;i<=50;i=i+2){
-        printf("%d\n",i);
+    int number;
+    scanf("%d",&number);
+    for(i=1;i<=10;i++){
+        printf("%d x %d = %d\n",number,i,number*i);
     }
-    return 0;
 }
