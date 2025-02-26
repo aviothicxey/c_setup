@@ -87,15 +87,34 @@
 // }
 //     return 0;
 // }
+
+// #include <stdio.h>
+// int main(){
+//     int i ,j;
+//     for (i = 1; i<= 2; ++i){
+//         printf("Outer: %d\n",i);
+    
+//     for (j = 1; j<=3 ; ++j){
+//         printf("inner : %d\n",j);
+//     }
+// }
+//     return 0;
+// }
+
+// #include <stdio.h>
+// int main(){
+//     int i;
+//     for (i=10;i<=100;i = i+10){
+//         printf("%d\n",i);
+//     }
+//     return 0;
+// }
+
 #include <stdio.h>
 int main(){
-    int i ,j;
-    for (i = 1; i<= 2; ++i){
-        printf("Outer: %d\n",i);
-    
-    for (j = 1; j<=3 ; ++j){
-        printf("inner : %d\n",j);
+    int i;
+    for (i=1;i<=50;i=i+2){
+        printf("%d\n",i);
     }
-}
     return 0;
 }
