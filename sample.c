@@ -139,13 +139,29 @@
 //     return 0;
 // }
 
+// #include <stdio.h>
+// int main(){
+//     int i ;
+//     for (i=0;i<10;i++){
+//         if (i==4){
+//             break;
+//         }
+//         printf("%d\n",i);
+//     }
+// }
+
 #include <stdio.h>
 int main(){
-    int i ;
-    for (i=0;i<10;i++){
-        if (i==4){
-            break;
-        }
-        printf("%d\n",i);
-    }
+    int mynumbers[]={1,2,3,4,5,6,7,8,9,10};
+    printf("%d\n",mynumbers[0]);
+    printf("%d\n",mynumbers[1]);
+    printf("%d\n",mynumbers[2]);
+    printf("%d\n",mynumbers[3]);
+    printf("%d\n",mynumbers[4]);
+    printf("%d\n",mynumbers[5]);
+    printf("%d\n",mynumbers[6]);
+    printf("%d\n",mynumbers[7]);
+    printf("%d\n",mynumbers[8]);
+    printf("%d\n",mynumbers[9]);
+    return 0;
 }
