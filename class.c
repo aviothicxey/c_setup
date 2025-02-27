@@ -35,7 +35,8 @@
 // }
 
 #include <stdio.h>
-int add(int a, int b){
+int add(int a, int b);
+int main(){
     int res;
     res = add(10,20);
     printf("Sum = %d",res);
@@ -46,3 +47,4 @@ int add(int a, int b){
     c = a+b;
     return (c);
 }
+
