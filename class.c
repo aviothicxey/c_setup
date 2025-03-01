@@ -34,17 +34,30 @@
 //     return 0;
 // }
 
-#include <stdio.h>
-int add(int a, int b);
-int main(){
-    int res;
-    res = add(10,20);
-    printf("Sum = %d",res);
-    return 0;
-}
-int add(int a, int b){
-    int c;
-    c = a+b;
-    return (c);
-}
+// #include <stdio.h>
+// int add(int a, int b);
+// int main(){
+//     int res;
+//     res = add(10,20);
+//     printf("Sum = %d",res);
+//     return 0;
+// }
+// int add(int a, int b){
+//     int c;
+//     c = a+b;
+//     return (c);
+// }
 
+#include <stdio.h>
+int square_area();
+void main(){
+    printf("going to calculate the area of square\n");
+    float area = square_area();
+    printf("Area of square is %.2f",area);
+}
+int square_area(){
+    float side;
+    printf("Enter the side of square: ");
+    scanf("%f",&side);
+    return (side*side);
+}
