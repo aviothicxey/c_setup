@@ -48,16 +48,42 @@
 //     return (c);
 // }
 
+// #include <stdio.h>
+// int square_area();
+// void main(){
+//     printf("going to calculate the area of square\n");
+//     float area = square_area();
+//     printf("Area of square is %.2f",area);
+// }
+// int square_area(){
+//     float side;
+//     printf("Enter the side of square: ");
+//     scanf("%f",&side);
+//     return (side*side);
+// }
+
 #include <stdio.h>
-int square_area();
-void main(){
-    printf("going to calculate the area of square\n");
-    float area = square_area();
-    printf("Area of square is %.2f",area);
+int fibonnaci(int n);
+int main(){
+    int n;
+    printf("Enter the number of terms: ");
+    scanf("%d",&n);
+    printf("Fibonnaci series: ");
+    for (int i = 0; i < n; i++)
+    {
+        printf("%d ",fibonnaci(i));
+    }
+    return 0;
 }
-int square_area(){
-    float side;
-    printf("Enter the side of square: ");
-    scanf("%f",&side);
-    return (side*side);
+int fibonnaci(int n){
+    if (n<=0){
+        return 0;
+    }
+    else if (n==1){
+        return 1;
+    }
+    else{
+        return (fibonnaci(n-1)+fibonnaci(n-2));
+    }
+
 }
