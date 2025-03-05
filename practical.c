@@ -206,14 +206,33 @@
 //     return 0;
 // }
 
+// #include <stdio.h>
+// void myfunction(int number[]){
+//     for (int i = 0;i<7;i++){
+//         printf("%d\n",number[i]);
+//     }
+// }
+// int main(){
+//     int number[] = {10,19,12,13,14,14,15,76,97};
+//     myfunction(number);
+//     return 0;
+// }
+
+// #include <stdio.h>
+// int myfunction(int x){
+//     return 5 + x;
+// }
+// int main(){
+//     printf("result is : %d", myfunction(3));
+//     return 0;
+// }
+
 #include <stdio.h>
-void myfunction(int number[]){
-    for (int i = 0;i<7;i++){
-        printf("%d\n",number[i]);
-    }
+int may(int x, int y){
+    return x + y;
 }
 int main(){
-    int number[] = {10,19,12,13,14,14,15,76,97};
-    myfunction(number);
+    int might = may(10,20);
+    printf("result is : %d",might);
     return 0;
 }
