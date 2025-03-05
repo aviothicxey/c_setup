@@ -182,3 +182,26 @@
 //     return 0;
 // }
 
+// #include <stdio.h>
+// void myfunction(char name[]){
+//     printf("this is %s\n", name);
+// }
+// int main(){
+//     myfunction("Liam");
+//     myfunction("Emma");
+//     myfunction("Noah");
+//     return 0;
+
+// }
+
+#include <stdio.h>
+void total(int a, int b){
+    int sum = a+b;
+    printf("the sum of %d and %d is : %d\n",a,b,sum);
+}
+int main(){
+    total(10,20);
+    total(30,40);
+    total(50,60);
+    return 0;
+}

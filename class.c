@@ -87,26 +87,43 @@
 //     }
 
 // }
-#include <stdio.h>
-#include<string.h>
-void reverse(char *str,int start,int end)
-{
-    if(start >= end)
-    return ;
-    else{
-        char temp = str[start];
-        str[start] = str[end];
-        str[end] = temp;
-        reverse(str,start+1,end-1);
-    }
-}
-int main(){
-    char str[100];
-    printf("Enter a string: ");
-    scanf("%s",str);
-   int n = strlen(str);
-    reverse(str,0,n-1);
-    printf("Reversed string: %s",str);
+// #include <stdio.h>
+// #include<string.h>
+// void reverse(char *str,int start,int end)
+// {
+//     if(start >= end)
+//     return ;
+//     else{
+//         char temp = str[start];
+//         str[start] = str[end];
+//         str[end] = temp;
+//         reverse(str,start+1,end-1);
+//     }
+// }
+// int main(){
+//     char str[100];
+//     printf("Enter a string: ");
+//     scanf("%s",str);
+//    int n = strlen(str);
+//     reverse(str,0,n-1);
+//     printf("Reversed string: %s",str);
 
-    return 0;
-}
+//     return 0;
+// }
+// #include <stdio.h>
+// int sumof(int num){
+//     if (num==0){
+//         return 0;
+//     }
+//     return (num%10)+sumof(num/10);
+// }
+// int main(){
+//     int num;
+//     printf("Enter a number:");
+//     scanf("%d",&num);
+//     int result=sumof(num);
+//     printf("Sum of digits of %d is %d\n", num,result);
+//     return 0;
+// }
+
+
