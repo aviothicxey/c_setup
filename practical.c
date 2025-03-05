@@ -194,14 +194,26 @@
 
 // }
 
+// #include <stdio.h>
+// void total(int a, int b){
+//     int sum = a+b;
+//     printf("the sum of %d and %d is : %d\n",a,b,sum);
+// }
+// int main(){
+//     total(10,20);
+//     total(30,40);
+//     total(50,60);
+//     return 0;
+// }
+
 #include <stdio.h>
-void total(int a, int b){
-    int sum = a+b;
-    printf("the sum of %d and %d is : %d\n",a,b,sum);
+void myfunction(int number[]){
+    for (int i = 0;i<7;i++){
+        printf("%d\n",number[i]);
+    }
 }
 int main(){
-    total(10,20);
-    total(30,40);
-    total(50,60);
+    int number[] = {10,19,12,13,14,14,15,76,97};
+    myfunction(number);
     return 0;
 }
