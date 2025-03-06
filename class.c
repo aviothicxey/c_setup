@@ -126,4 +126,51 @@
 //     return 0;
 // }
 
+// #include <stdio.h>
+// int fun(){
+//     static int num = 16;
+//     return num--;
+// }
+// int main(){
+//     for (fun(); fun(); fun())
+//     {
+//         printf("%d ",fun());
+//     }
+//     return 0;
+// }
 
+// #include <stdio.h>
+// int main(){
+//     static int i = 5;
+//     if (--i){
+//         main();
+//         printf("%d",i);
+//     }
+//     return 0;
+// }
+
+// #include <stdio.h>
+// int main(){
+//     static int i = 5;
+//     if (--i){
+//         printf("%d",i);
+//         main();
+//     }
+// }
+
+#include <stdio.h>
+void printnumbers(register int n){
+    for (int i = 0; i < n; i++)
+    {
+        printf("%d\n",i);
+    }
+    printf("Value of n: %d\n",n);
+}
+int main(){
+    int num;
+    printf("Enter a number: ");
+    scanf("%d",&num);
+    printf("Printing numbers upto %d\n",num);
+    printnumbers(num);
+    return 0;
+}
