@@ -227,12 +227,35 @@
 //     return 0;
 // }
 
+// #include <stdio.h>
+// int may(int x, int y){
+//     return x + y;
+// }
+// int main(){
+//     int might = may(10,20);
+//     printf("result is : %d",might);
+//     return 0;
+// }
+
+// #include <stdio.h>
+// float celcius(float f){
+//     return (f-32)*5/9;
+// }
+// int main(){
+//     float f;
+//     scanf("%f",&f);
+//     float r = celcius(f);
+//     printf("The temperature in celcius is : %.2f",r);
+//     return 0;
+// }
 #include <stdio.h>
-int may(int x, int y){
-    return x + y;
+int x = 5;
+void function(){
+int x = 22;
+printf("x = %d\n",x);
 }
 int main(){
-    int might = may(10,20);
-    printf("result is : %d",might);
-    return 0;
+function();
+printf("x = %d\n",x);
+return 0;
 }
