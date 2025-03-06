@@ -158,19 +158,19 @@
 //     }
 // }
 
-#include <stdio.h>
-void printnumbers(register int n){
-    for (int i = 0; i < n; i++)
-    {
-        printf("%d\n",i);
-    }
-    printf("Value of n: %d\n",n);
-}
-int main(){
-    int num;
-    printf("Enter a number: ");
-    scanf("%d",&num);
-    printf("Printing numbers upto %d\n",num);
-    printnumbers(num);
-    return 0;
-}
+// #include <stdio.h>
+// void printnumbers(register int n){
+//     for (int i = 0; i < n; i++)
+//     {
+//         printf("%d\n",i);
+//     }
+//     printf("Value of n: %d\n",n);
+// }
+// int main(){
+//     int num;
+//     printf("Enter a number: ");
+//     scanf("%d",&num);
+//     printf("Printing numbers upto %d\n",num);
+//     printnumbers(num);
+//     return 0;
+// }
