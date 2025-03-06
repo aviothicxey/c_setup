@@ -248,14 +248,15 @@
 //     printf("The temperature in celcius is : %.2f",r);
 //     return 0;
 // }
-#include <stdio.h>
-int x = 5;
-void function(){
-int x = 22;
-printf("x = %d\n",x);
-}
-int main(){
-function();
-printf("x = %d\n",x);
-return 0;
-}
+// #include <stdio.h>
+// int x = 5;
+// void function(){
+// int x = 22;
+// printf("x = %d\n",x);
+// }
+// int main(){
+// function();
+// printf("x = %d\n",x);
+// return 0;
+// }
+

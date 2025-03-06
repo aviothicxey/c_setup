@@ -126,4 +126,34 @@
 //     return 0;
 // }
 
+// #include <stdio.h>
+// int fun(){
+//     static int num = 16;
+//     return num--;
+// }
+// int main(){
+//     for (fun(); fun(); fun())
+//     {
+//         printf("%d ",fun());
+//     }
+//     return 0;
+// }
 
+// #include <stdio.h>
+// int main(){
+//     static int i = 5;
+//     if (--i){
+//         main();
+//         printf("%d",i);
+//     }
+//     return 0;
+// }
+
+#include <stdio.h>
+int main(){
+    static int i = 5;
+    if (--i){
+        printf("%d",i);
+        main();
+    }
+}
