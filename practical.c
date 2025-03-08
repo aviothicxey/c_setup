@@ -260,3 +260,12 @@
 // return 0;
 // }
 
+#include <stdio.h>
+int my(int a , int b){
+    return a + b;
+}
+int main(){
+  int c =  my(10,20);
+    printf("%d\n",c);
+    return 0;
+}
