@@ -175,64 +175,65 @@
 //     return 0;
 // }
 
-#include <stdio.h>
-void main()
-{
-    int x=10;
-    int *ptr;
-    ptr=&x;
-    printf("%d",ptr);
-    printf("%d\n",*ptr);
+// #include <stdio.h>
+// void main()
+// {
+//     int x=10;
+//     int *ptr;
+//     ptr=&x;
+//     printf("%d",ptr);
+//     printf("%d\n",*ptr);
 
-}
-#include <stdio.h>
-int main() {
-    int *p, a;
-    printf("Enter a number of a: ");
-    scanf("%d", &a);
-    p = &a; 
-    printf("The value of a is %d\n", *p);
-    return 0;
-}
-#include <stdio.h>
-int main() {
-   int x = 10;
-   int y = 20;  
-   int *p1 = &x;
-   int *p2 = &y;
-   p1 = p2;
-   printf("%d %d\n", *p1, *p2);
+// }
+// #include <stdio.h>
+// int main() {
+//     int *p, a;
+//     printf("Enter a number of a: ");
+//     scanf("%d", &a);
+//     p = &a; 
+//     printf("The value of a is %d\n", *p);
+//     return 0;
+// }
+// #include <stdio.h>
+// int main() {
+//    int x = 10;
+//    int y = 20;  
+//    int *p1 = &x;
+//    int *p2 = &y;
+//    p1 = p2;
+//    printf("%d %d\n", *p1, *p2);
    
-   return 0;
-}
-#include <stdio.h>
-int main() {
-   int a = 25 ,b;
-   int *ptr1, *ptr2;
-    ptr1 = &a;  
-    ptr2 = &b;
-    b = 36;
-    printf("%d %d %d %d\n", a, b, *ptr1, *ptr2);
-    return 0;
-}
-#include <stdio.h>
-int main() {
-    int a = 20;
-    int *p;
-    p = &a; 
-    printf("Pointer before increment:");
-    printf("%d\n", *p);
-    p++;
-    printf("Pointer after increment:");
-    printf("%d\n", *p);
-    return 0;
-}
-#include <stdio.h>
-int main(){
-    int x=50;
-    int *ptr1=&x;
-    int *ptr2=&x;
-    int y=++*ptr2;
-    printf("%d%d",++*ptr1,y);
-    return 0;
-}
+//    return 0;
+// }
+// #include <stdio.h>
+// int main() {
+//    int a = 25 ,b;
+//    int *ptr1, *ptr2;
+//     ptr1 = &a;  
+//     ptr2 = &b;
+//     b = 36;
+//     printf("%d %d %d %d\n", a, b, *ptr1, *ptr2);
+//     return 0;
+// }
+// #include <stdio.h>
+// int main() {
+//     int a = 20;
+//     int *p;
+//     p = &a; 
+//     printf("Pointer before increment:");
+//     printf("%d\n", *p);
+//     p++;
+//     printf("Pointer after increment:");
+//     printf("%d\n", *p);
+//     return 0;
+// }
+// #include <stdio.h>
+// int main(){
+//     int x=50;
+//     int *ptr1=&x;
+//     int *ptr2=&x;
+//     int y=++*ptr2;
+//     printf("%d%d",++*ptr1,y);
+//     return 0;
+// }
+
