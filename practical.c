@@ -360,3 +360,11 @@
 // printf("%p\n", &myAge);
 // printf("%p\n", ptr);
 // }
+#include <stdio.h>
+void reverse(int arr[],int start,int end){
+    while (start < end){
+        int x = arr[start];
+        arr[start]=arr[end];
+        
+    }
+}
