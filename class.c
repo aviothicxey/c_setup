@@ -297,19 +297,34 @@
 //     return 0;
 // }
 
+// #include <stdio.h>
+// int main(){
+//     int size , i ;
+//     printf("enter the number of elements: ");
+//     scanf("%d",&size);
+//     int arr[size];
+//     printf("enter %d elements: \n",size);
+//     for(i=0 ; i<size;i++){ 
+//         scanf("%d",&arr[i]);
+//     }
+//     printf("you entered : ");
+//     for (i = 0 ; i <size; i++){
+//         printf("%d",arr[i]);
+//     }
+//     return 0;
+// }       
+
 #include <stdio.h>
-int main(){
-    int size , i ;
-    printf("enter the number of elements: ");
-    scanf("%d",&size);
-    int arr[size];
-    printf("enter %d elements: \n",size);
-    for(i=0 ; i<size;i++){ 
-        scanf("%d",&arr[i]);
+ int main(){
+    int rows;
+    scanf("%d",&rows);
+    for( int i = 1 ; i <= rows ; i++){
+       for ( int j =1 ; j <= rows -i ; j++){
+           printf(" ");
+       }
+         for (int k = 1 ; k <= 2*i-1 ; k++){
+              printf("*");
+         }
+         printf("\n");
     }
-    printf("you entered : ");
-    for (i = 0 ; i <size; i++){
-        printf("%d",arr[i]);
-    }
-    return 0;
-}       
+ }
