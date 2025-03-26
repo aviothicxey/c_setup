@@ -360,11 +360,32 @@
 // printf("%p\n", &myAge);
 // printf("%p\n", ptr);
 // }
+
+
+// #include <stdio.h>
+//  int main(){
+//     int rows;
+//     scanf("%d",&rows);
+//     for( int i = 1 ; i <= rows ; i++){
+//        for ( int j =1 ; j <= rows -i ; j++){
+//            printf(" ");
+//        }
+//          for (int k = 1 ; k <= 2*i-1 ; k++){
+//               printf("*");
+//          }
+//          printf("\n");
+//     }
+//  }
+
+
 #include <stdio.h>
-void reverse(int arr[],int start,int end){
-    while (start < end){
-        int x = arr[start];
-        arr[start]=arr[end];
-        
+int main(){
+    int rows ;
+    scanf("%d",&rows);
+    for ( int i = 1 ; i<= rows ; i++){
+        for (int j =1 ; j<= i ; j++){
+            printf("%d",j);
+        }
+        printf("\n");
     }
 }
