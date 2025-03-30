@@ -378,14 +378,85 @@
 //  }
 
 
+// #include <stdio.h>
+// int main(){
+//     int rows ;
+//     scanf("%d",&rows);
+//     for ( int i = 1 ; i<= rows ; i++){
+//         for (int j =1 ; j<= i ; j++){
+//             printf("%d",j);
+//         }
+//         printf("\n");
+//     }
+// }
+
+// #include <stdio.h>
+
+// void findRanks(int leaderboard[], int n, int playerScores[], int m) {
+//     // Remove duplicate scores to create a unique ranking system
+//     int uniqueScores[n], rank[n], uniqueCount = 0;
+//     uniqueScores[0] = leaderboard[0];
+//     rank[0] = 1;
+//     uniqueCount++;
+
+//     for (int i = 1; i < n; i++) {
+//         if (leaderboard[i] != leaderboard[i - 1]) {
+//             uniqueScores[uniqueCount] = leaderboard[i];
+//             rank[uniqueCount] = uniqueCount + 1;
+//             uniqueCount++;
+//         }
+//     }
+
+//     // Finding rank for each player's score
+//     int i = uniqueCount - 1; // Start from the lowest rank
+//     for (int j = 0; j < m; j++) {
+//         while (i >= 0 && playerScores[j] >= uniqueScores[i]) {
+//             i--; // Move up in the leaderboard
+//         }
+//         printf("Rank after game %d: %d\n", j + 1, i + 2);
+//     }
+// }
+
+// int main() {
+//     int n, m;
+    
+//     // Input leaderboard
+//     printf("Enter number of leaderboard scores: ");
+//     scanf("%d", &n);
+//     int leaderboard[n];
+//     printf("Enter leaderboard scores (descending order): ");
+//     for (int i = 0; i < n; i++) {
+//         scanf("%d", &leaderboard[i]);
+//     }
+
+//     // Input player's scores
+//     printf("Enter number of games played: ");
+//     scanf("%d", &m);
+//     int playerScores[m];
+//     printf("Enter player's scores (ascending order): ");
+//     for (int i = 0; i < m; i++) {
+//         scanf("%d", &playerScores[i]);
+//     }
+
+//     // Find the player's ranks
+//     findRanks(leaderboard, n, playerScores, m);
+
+//     return 0;
+// }
+
 #include <stdio.h>
-int main(){
-    int rows ;
-    scanf("%d",&rows);
-    for ( int i = 1 ; i<= rows ; i++){
-        for (int j =1 ; j<= i ; j++){
-            printf("%d",j);
-        }
-        printf("\n");
-    }
-}
+ int main(){
+    int t;
+    scanf("%d",&t);
+   if ( t % 2 == 0 || t % 3 == 0 || t % 5 ==0){
+    printf("1");
+   }
+   else if (t == 2){
+    printf("1");
+   }
+   else{
+    printf("0");
+   }
+   return 0;
+ }
+ 
