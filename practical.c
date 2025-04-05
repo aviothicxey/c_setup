@@ -444,19 +444,34 @@
 //     return 0;
 // }
 
+// #include <stdio.h>
+//  int main(){
+//     int t;
+//     scanf("%d",&t);
+//    if ( t % 2 == 0 || t % 3 == 0 || t % 5 ==0){
+//     printf("1");
+//    }
+//    else if (t == 2){
+//     printf("1");
+//    }
+//    else{
+//     printf("0");
+//    }
+//    return 0;
+//  }
 #include <stdio.h>
- int main(){
-    int t;
-    scanf("%d",&t);
-   if ( t % 2 == 0 || t % 3 == 0 || t % 5 ==0){
-    printf("1");
-   }
-   else if (t == 2){
-    printf("1");
-   }
-   else{
-    printf("0");
-   }
-   return 0;
- }
- 
+
+int main() {
+    int num, fact = 1;
+    
+    printf("Enter a number: ");
+    scanf("%d", &num);
+    
+    for (int i = 1; i <= num; i++) {
+        fact *= i;
+    }
+
+    printf("Factorial of %d is %d\n", num, fact);
+    
+    return 0;
+}
