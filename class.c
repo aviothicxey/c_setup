@@ -409,3 +409,51 @@
 //     return 0;
 // }
 
+// #include <stdio.h>
+// int main(){
+//     int arr[3][3] = {{1,2,3},{4,5,6},{7,8,9}};
+//     int rows =3, cols = 3, total_sum = 0;
+//     for (int i = 0; i < rows; i++)
+//     {
+//         for (int j = 0; j < cols; j++)
+//         {
+//             total_sum += arr[i][j];
+//         }
+//     }
+//     printf("Sum of all elements in the array: %d\n",total_sum);
+//     return 0;
+// }
+
+#include<stdio.h>
+int main(){
+    int m , n , i , j , a[10][10], b[10][10], c[10][10];
+    printf("Enter the number of rows and columns\n: ");
+    scanf("%d%d",&m,&n);
+    printf("Enter the elements of first matrix\n");
+    for ( i = 0; i < m; i++)
+    {
+        for ( j = 0; j < n; j++)
+        {
+            scanf("%d",&a[i][j]);
+        }
+    }
+    printf("Enter the elements of second matrix\n");    
+    for( i = 0; i < m; i++)
+    {
+        for ( j = 0; j < n; j++)
+        {
+            scanf("%d",&b[i][j]);
+        }
+    }
+    printf("The sum of the two matrices is:\n");
+    for ( i = 0; i < m; i++)
+    {
+        for ( j = 0; j < n; j++)
+        {
+            c[i][j] = a[i][j] + b[i][j];
+            printf("%d ",c[i][j]);
+        }
+        printf("\n");
+    }
+    return 0;
+}

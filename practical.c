@@ -6,7 +6,6 @@
 // }
 
 // #include <stdio.h>
-
 // int main() {
 //     int age;
 //     printf("Enter your age: ");
@@ -16,7 +15,6 @@
 // }
 
 // #include <stdio.h>
-
 // int main() {
 //     int num1, num2, sum;
 //     printf("Enter two numbers: ");
@@ -76,31 +74,25 @@
 // }
 
 // #include <stdio.h>
-
 // int main() {
 //     int a, b, temp;
 //     printf("Enter two numbers: ");
 //     scanf("%d %d", &a, &b);
-
 //     temp = a;
 //     a = b;
 //     b = temp;
-
 //     printf("After swapping: a = %d, b = %d\n", a, b);
 //     return 0;
 // }
 
 // #include <stdio.h>
-
 // int main() {
 //     int a, b;
 //     printf("Enter two numbers: ");
 //     scanf("%d %d", &a, &b);
-
 //     a = a + b;
 //     b = a - b;
 //     a = a - b;
-
 //     printf("After swapping: a = %d, b = %d\n", a, b);
 //     return 0;
 // }
@@ -136,12 +128,10 @@
 // }
 
 // #include <stdio.h>
-
 // int main() {
 //     char ch;
 //     printf("Enter an alphabet: ");
 //     scanf(" %c", &ch);
-
 //     switch (ch) {
 //         case 'a': case 'e': case 'i': case 'o': case 'u':
 //         case 'A': case 'E': case 'I': case 'O': case 'U':
@@ -154,7 +144,6 @@
 // }
 
 // #include <stdio.h>
-
 // int main() {
 //     int num;
 //     printf("Enter a number: ");
@@ -177,7 +166,6 @@
 //         sum += i;
 //         i++;
 //     }
-
 //     printf("Sum of first %d natural numbers: %d\n", n, sum);
 //     return 0;
 // }
@@ -459,19 +447,138 @@
 //    }
 //    return 0;
 //  }
+// #include <stdio.h>
+
+// int main() {
+//     int num, fact = 1;
+    
+//     printf("Enter a number: ");
+//     scanf("%d", &num);
+    
+//     for (int i = 1; i <= num; i++) {
+//         fact *= i;
+//     }
+
+//     printf("Factorial of %d is %d\n", num, fact);
+    
+//     return 0;
+// }
+
+// #include <stdio.h>
+// #include <stdlib.h>
+// int main(){
+//     int *p,n,i;
+//     printf("Enter the number of elements: ");
+//     scanf("%d",&n);
+//     p=(int*)calloc(n,sizeof(int));
+//     if (p == NULL){
+//         printf("Memory allocation failed\n");
+//         exit(0);
+//     }
+// else{
+//     printf("memory allocted using malloc\n");
+//     for(i=0;i<n;i++){
+//         p[i]= i + 10 ;
+
+//     }
+//     printf("The elements are:\n");
+//     for(i=0;i<n;i++){
+//         printf("%d ",p[i]);
+//     }
+// }
+//     free(p);
+//     return 0;
+// }
+
 #include <stdio.h>
+#define MAX 50
+
+int arr[MAX];
+int n = 0;
+
+void insert() {
+    int pos, val;
+    printf("Enter position and value: ");
+    scanf("%d %d", &pos, &val);
+    
+    if(pos < 0 || pos > n) {
+        printf("Invalid position!\n");
+        return;
+    }
+    
+    for(int i=n; i>pos; i--)
+        arr[i] = arr[i-1];
+    
+    arr[pos] = val;
+    n++;
+}
+
+void update() {
+    int pos, val;
+    printf("Enter position and new value: ");
+    scanf("%d %d", &pos, &val);
+    
+    if(pos < 0 || pos >= n) {
+        printf("Invalid position!\n");
+        return;
+    }
+    
+    arr[pos] = val;
+}
+
+void delete() {
+    int pos;
+    printf("Enter position to delete: ");
+    scanf("%d", &pos);
+    
+    if(pos < 0 || pos >= n) {
+        printf("Invalid position!\n");
+        return;
+    }
+    
+    for(int i=pos; i<n-1; i++)
+        arr[i] = arr[i+1];
+    
+    n--;
+}
+
+void display() {
+    printf("Array: ");
+    for(int i=0; i<n; i++)
+        printf("%d ", arr[i]);
+    printf("\n");
+}
+
+void search() {
+    int val, found=0;
+    printf("Enter value to search: ");
+    scanf("%d", &val);
+    
+    for(int i=0; i<n; i++) {
+        if(arr[i] == val) {
+            printf("Found at position %d\n", i);
+            found = 1;
+        }
+    }
+    
+    if(!found) printf("Not found\n");
+}
 
 int main() {
-    int num, fact = 1;
-    
-    printf("Enter a number: ");
-    scanf("%d", &num);
-    
-    for (int i = 1; i <= num; i++) {
-        fact *= i;
+    int choice;
+    while(1) {
+        printf("\n1.Insert 2.Update 3.Delete 4.Display 5.Search 6.Exit\n");
+        scanf("%d", &choice);
+        
+        switch(choice) {
+            case 1: insert(); break;
+            case 2: update(); break;
+            case 3: delete(); break;
+            case 4: display(); break;
+            case 5: search(); break;
+            case 6: return 0;
+            default: printf("Invalid choice!\n");
+        }
     }
-
-    printf("Factorial of %d is %d\n", num, fact);
-    
-    return 0;
 }
+

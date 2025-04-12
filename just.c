@@ -1,16 +1,15 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
 
 int main() {
-    // Initialize random number generator
-    srand(time(0));
+    int num, num1, num2, greatest;
 
-    // Generate a random number between 0 and 99
-    int random_number = rand() % 100;
+    // Corrected scanf (no trailing space)
+    scanf("%d %d %d", &num, &num1, &num2);
 
-    // Print the random number
-    printf("Random number: %d\n", random_number);
+    // Using ternary operator only
+    greatest = (num >= num1 && num >= num2) ? num :
+               (num1 >= num && num1 >= num2) ? num1 : num2;
 
+    printf("The greatest number is %d\n", greatest);
     return 0;
 }

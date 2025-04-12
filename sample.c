@@ -360,239 +360,215 @@
 //     return 0;
 // }
 
-// // experiment 11
+// experiment 11
 
-// #include <stdio.h>
-// #include <math.h>
+#include <stdio.h>
+#include <math.h>
 
-// int main() {
-//     int number, original, digit, sum = 0, count = 0;
-//     printf("Enter a number: ");
-//     scanf("%d", &number);
+int main() {
+    int number, original, digit, sum = 0, count = 0;
+    printf("Enter a number: ");
+    scanf("%d", &number);
 
-//     original = number;
-//     int temp = number;
-//     while (temp != 0) {
-//         count++;
-//         temp = temp / 10;
-//     }
-//     temp = number;
-//     while (temp != 0) {
-//         digit = temp % 10;
-//         sum += pow(digit, count);
-//         temp = temp / 10;
-//     }
-//     if (sum == original) {
-//         printf("%d is an Armstrong number.\n", original);
-//     } else {
-//         printf("%d is not an Armstrong number.\n", original);
-//     }
+    original = number;
+    int temp = number;
+    while (temp != 0) {
+        count++;
+        temp = temp / 10;
+    }
+    temp = number;
+    while (temp != 0) {
+        digit = temp % 10;
+        sum += pow(digit, count);
+        temp = temp / 10;
+    }
+    if (sum == original) {
+        printf("%d is an Armstrong number.\n", original);
+    } else {
+        printf("%d is not an Armstrong number.\n", original);
+    }
 
-//     return 0;
-// }
+    return 0;
+}
 
-// //experiment 12
-
-// #include <stdio.h>
-
-// int main() {
-//     int num, count = 0, reverse = 0;
-
-//     printf("Enter an integer: ");
-//     scanf("%d", &num);
-
-//     int temp = num;
-
-//     while (temp != 0) {
-//         count++;
-//         reverse = reverse * 10 + (temp % 10);
-//         temp /= 10;
-//     }
-
-//     printf("Number of digits: %d\n", count);
-//     printf("Reversed number: %d\n", reverse);
-
-//     return 0;
-// }
-
-
-
-// //experiment 13
-
-
-// #include <stdio.h>
-
-// int main() {
-//     int n, first = 0, second = 1, next;
-
-//     printf("Enter the number of terms: ");
-//     scanf("%d", &n);
-
-//     printf("Fibonacci Series: ");
-//     for (int i = 0; i < n; i++) {
-//         printf("%d ", first);
-//         next = first + second;
-//         first = second;
-//         second = next;
-//     }
-
-//     return 0;
-// }
-
-
-//experiment 14
-//(a) 
-
-// #include <stdio.h>
-
-// int main() {
-//     for (int i = 1; i <= 6; i++) {
-//         for (int j = 1; j <= i; j++) {
-//             printf("* ");
-//         }
-//         printf("\n");
-//     }
-//     return 0;
-// }
-
-// //(b)
-// #include <stdio.h>
-// int main(){
-//     int n;
-//     scanf("%d",&n);
-//     for(int i =1; i <=n ; i++){
-//         for (int j= 1; j<=n-i;j++){
-//             printf(" ");
-//         }
-//         for (int k =1 ; k<= i ; k++){
-//             printf("*");
-//         }
-//         printf("\n");
-//     }
-//     return 0;
-// }
-
-
-// //experiment 15
-
-
-// #include <stdio.h>
-
-// int main() {
-//     for (int i = 1; i <= 6; i++) {
-//         for (int j = 1; j <= 6; j++) {
-//             printf("%d\t ", i * j);
-//         }
-//         printf("\n");
-//     }
-//     return 0;
-// }
-
-
-// //experiment 16
-
-// #include <stdio.h>
-// #include <math.h>
-
-// int isPrime(int n) {
-//     if (n < 2) return 0;
-//     for (int i = 2; i <= n / 2; i++)
-//         if (n % i == 0) return 0;
-//     return 1;
-// }
-
-// int isArmstrong(int n) {
-//     int original = n, sum = 0, digits = 0, temp = n;
-//     while (temp != 0) {
-//         digits++;
-//         temp /= 10;
-//     }
-//     temp = n;
-//     while (temp != 0) {
-//         sum += pow(temp % 10, digits);
-//         temp /= 10;
-//     }
-//     return (sum == original);
-// }
-
-// int isPerfect(int n) {
-//     int sum = 0;
-//     for (int i = 1; i < n; i++) {
-//         if (n % i == 0)
-//             sum += i;
-//     }
-//     return (sum == n);
-// }
-
-// int main() {
-//     int num;
-//     printf("Enter a number: ");
-//     scanf("%d", &num);
-
-//     if (isPrime(num))
-//         printf("%d is a Prime number.\n", num);
-//     else
-//         printf("%d is not a Prime number.\n", num);
-
-//     if (isArmstrong(num))
-//         printf("%d is an Armstrong number.\n", num);
-//     else
-//         printf("%d is not an Armstrong number.\n", num);
-
-//     if (isPerfect(num))
-//         printf("%d is a Perfect number.\n", num);
-//     else
-//         printf("%d is not a Perfect number.\n", num);
-
-//     return 0;
-// }
-
-
-// //experiment 17
-
-// #include <stdio.h>
-// #define PI 3.14159
-
-// float area(float r) {
-//     return PI * r * r;
-// }
-
-// float circumference(float r) {
-//     return 2 * PI * r;
-// }
-
-// int main() {
-//     float radius;
-//     printf("Enter the radius: ");
-//     scanf("%f", &radius);
-
-//     printf("Area = %.2f\n", area(radius));
-//     printf("Circumference = %.2f\n", circumference(radius));
-
-//     return 0;
-// }
-
-
-// //experiment 18
+//experiment 12
 
 #include <stdio.h>
 
+int main() {
+    int num, count = 0, reverse = 0;
+
+    printf("Enter an integer: ");
+    scanf("%d", &num);
+
+    int temp = num;
+
+    while (temp != 0) {
+        count++;
+        reverse = reverse * 10 + (temp % 10);
+        temp /= 10;
+    }
+
+    printf("Number of digits: %d\n", count);
+    printf("Reversed number: %d\n", reverse);
+
+    return 0;
+}
+
+
+
+//experiment 13
+
+
+#include <stdio.h>
+int main() {
+    int n, first = 0, second = 1, next;
+    printf("Enter the number of terms: ");
+    scanf("%d", &n);
+    printf("Fibonacci Series: ");
+    for (int i = 0; i < n; i++) {
+        printf("%d ", first);
+        next = first + second;
+        first = second;
+        second = next;
+    }
+    return 0;
+}
+
+
+experiment 14
+(a) 
+
+#include <stdio.h>
+int main() {
+    for (int i = 1; i <= 6; i++) {
+        for (int j = 1; j <= i; j++) {
+            printf("* ");
+        }
+        printf("\n");
+    }
+    return 0;
+}
+
+//(b)
+#include <stdio.h>
+int main(){
+    int n;
+    scanf("%d",&n);
+    for(int i =1; i <=n ; i++){
+        for (int j= 1; j<=n-i;j++){
+            printf(" ");
+        }
+        for (int k =1 ; k<= i ; k++){
+            printf("*");
+        }
+        printf("\n");
+    }
+    return 0;
+}
+
+
+//experiment 15
+
+
+#include <stdio.h>
+int main() {
+    for (int i = 1; i <= 6; i++) {
+        for (int j = 1; j <= 6; j++) {
+            printf("%d\t ", i * j);
+        }
+        printf("\n");
+    }
+    return 0;
+}
+
+
+//experiment 16
+
+#include <stdio.h>
+#include <math.h>
+int isPrime(int n) {
+    if (n < 2) return 0;
+    for (int i = 2; i <= n / 2; i++)
+        if (n % i == 0) return 0;
+    return 1;}
+int isArmstrong(int n) {
+    int original = n, sum = 0, digits = 0, temp = n;
+    while (temp != 0) {
+        digits++;
+        temp /= 10; }
+    temp = n;
+    while (temp != 0) {
+        sum += pow(temp % 10, digits);
+        temp /= 10; }
+    return (sum == original);}
+int isPerfect(int n) {
+    int sum = 0;
+    for (int i = 1; i < n; i++) {
+        if (n % i == 0)
+            sum += i;}
+    return (sum == n);}
+int main() {
+    int num;
+    printf("Enter a number: ");
+    scanf("%d", &num);
+    if (isPrime(num))
+        printf("%d is a Prime number.\n", num);
+    else
+        printf("%d is not a Prime number.\n", num);
+    if (isArmstrong(num))
+        printf("%d is an Armstrong number.\n", num);
+    else
+        printf("%d is not an Armstrong number.\n", num);
+    if (isPerfect(num))
+        printf("%d is a Perfect number.\n", num);
+    else
+        printf("%d is not a Perfect number.\n", num);
+
+    return 0;}
+
+
+//experiment 17
+
+#include <stdio.h>
+#define PI 3.14159
+
+float area(float r) {
+    return PI * r * r;
+}
+
+float circumference(float r) {
+    return 2 * PI * r;
+}
+
+int main() {
+    float radius;
+    printf("Enter the radius: ");
+    scanf("%f", &radius);
+
+    printf("Area = %.2f\n", area(radius));
+    printf("Circumference = %.2f\n", circumference(radius));
+
+    return 0;
+}
+
+
+//experiment 18
+
+#include <stdio.h>
 void swapByValue(int a, int b) {
     int temp = a;
     a = b;
     b = temp;
     printf("Inside swapByValue - a: %d, b: %d\n", a, b);
 }
-
 void swapByReference(int *a, int *b) {
     int temp = *a;
     *a = *b;
     *b = temp;
 }
-
 int main() {
     int x = 5, y = 10;
-
     printf("Before swapByValue - x: %d, y: %d\n", x, y);
     swapByValue(x, y);
     printf("After swapByValue - x: %d, y: %d\n", x, y);
@@ -600,6 +576,15 @@ int main() {
     printf("\nBefore swapByReference - x: %d, y: %d\n", x, y);
     swapByReference(&x, &y);
     printf("After swapByReference - x: %d, y: %d\n", x, y);
-
     return 0;
 }
+
+#include<stdio.h>
+ int main(){
+ printf("Hello World"); 
+return 0;
+}
+
+
+
+
