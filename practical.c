@@ -490,95 +490,228 @@
 //     return 0;
 // }
 
-#include <stdio.h>
-#define MAX 50
+// #include <stdio.h>
+// #define MAX 50
 
-int arr[MAX];
-int n = 0;
+// int arr[MAX];
+// int n = 0;
 
-void insert() {
-    int pos, val;
-    printf("Enter position and value: ");
-    scanf("%d %d", &pos, &val);
+// void insert() {
+//     int pos, val;
+//     printf("Enter position and value: ");
+//     scanf("%d %d", &pos, &val);
     
-    if(pos < 0 || pos > n) {
-        printf("Invalid position!\n");
-        return;
-    }
+//     if(pos < 0 || pos > n) {
+//         printf("Invalid position!\n");
+//         return;
+//     }
     
-    for(int i=n; i>pos; i--)
-        arr[i] = arr[i-1];
+//     for(int i=n; i>pos; i--)
+//         arr[i] = arr[i-1];
     
-    arr[pos] = val;
-    n++;
-}
+//     arr[pos] = val;
+//     n++;
+// }
 
-void update() {
-    int pos, val;
-    printf("Enter position and new value: ");
-    scanf("%d %d", &pos, &val);
+// void update() {
+//     int pos, val;
+//     printf("Enter position and new value: ");
+//     scanf("%d %d", &pos, &val);
     
-    if(pos < 0 || pos >= n) {
-        printf("Invalid position!\n");
-        return;
-    }
+//     if(pos < 0 || pos >= n) {
+//         printf("Invalid position!\n");
+//         return;
+//     }
     
-    arr[pos] = val;
-}
+//     arr[pos] = val;
+// }
 
-void delete() {
-    int pos;
-    printf("Enter position to delete: ");
-    scanf("%d", &pos);
+// void delete() {
+//     int pos;
+//     printf("Enter position to delete: ");
+//     scanf("%d", &pos);
     
-    if(pos < 0 || pos >= n) {
-        printf("Invalid position!\n");
-        return;
-    }
+//     if(pos < 0 || pos >= n) {
+//         printf("Invalid position!\n");
+//         return;
+//     }
     
-    for(int i=pos; i<n-1; i++)
-        arr[i] = arr[i+1];
+//     for(int i=pos; i<n-1; i++)
+//         arr[i] = arr[i+1];
     
-    n--;
-}
+//     n--;
+// }
 
-void display() {
-    printf("Array: ");
-    for(int i=0; i<n; i++)
-        printf("%d ", arr[i]);
-    printf("\n");
-}
+// void display() {
+//     printf("Array: ");
+//     for(int i=0; i<n; i++)
+//         printf("%d ", arr[i]);
+//     printf("\n");
+// }
 
-void search() {
-    int val, found=0;
-    printf("Enter value to search: ");
-    scanf("%d", &val);
+// void search() {
+//     int val, found=0;
+//     printf("Enter value to search: ");
+//     scanf("%d", &val);
     
-    for(int i=0; i<n; i++) {
-        if(arr[i] == val) {
-            printf("Found at position %d\n", i);
-            found = 1;
-        }
-    }
+//     for(int i=0; i<n; i++) {
+//         if(arr[i] == val) {
+//             printf("Found at position %d\n", i);
+//             found = 1;
+//         }
+//     }
     
-    if(!found) printf("Not found\n");
-}
+//     if(!found) printf("Not found\n");
+// }
 
-int main() {
-    int choice;
-    while(1) {
-        printf("\n1.Insert 2.Update 3.Delete 4.Display 5.Search 6.Exit\n");
-        scanf("%d", &choice);
+// int main() {
+//     int choice;
+//     while(1) {
+//         printf("\n1.Insert 2.Update 3.Delete 4.Display 5.Search 6.Exit\n");
+//         scanf("%d", &choice);
         
-        switch(choice) {
-            case 1: insert(); break;
-            case 2: update(); break;
-            case 3: delete(); break;
-            case 4: display(); break;
-            case 5: search(); break;
-            case 6: return 0;
-            default: printf("Invalid choice!\n");
-        }
-    }
-}
+//         switch(choice) {
+//             case 1: insert(); break;
+//             case 2: update(); break;
+//             case 3: delete(); break;
+//             case 4: display(); break;
+//             case 5: search(); break;
+//             case 6: return 0;
+//             default: printf("Invalid choice!\n");
+//         }
+//     }
+// }
 
+// #include<stdio.h>
+// #define SIZE 100
+// void display(int arr[], int n) {
+//     for(int i=0;i<n;i++) printf("%d ",arr[i]);
+//     printf("\n");}
+// int main() {
+//     int arr[SIZE], n=0, ch, pos, val, i, key;
+//     while(1) {
+//         printf("\n1.Insert 2.Update 3.Delete 4.Display 5.Search 6.Exit\n");
+//         scanf("%d",&ch);
+//         switch(ch) {
+//             case 1:
+//                 printf("Enter value and position: ");
+//                 scanf("%d%d",&val,&pos);
+//                 for(i=n;i>pos;i--) arr[i]=arr[i-1];
+//                 arr[pos]=val; n++;
+//                 break;
+//             case 2:
+//                 printf("Enter position and new value: ");
+//                 scanf("%d%d",&pos,&val);
+//                 arr[pos]=val;
+//                 break;
+//             case 3:
+//                 printf("Enter position to delete: ");
+//                 scanf("%d",&pos);
+//                 for(i=pos;i<n-1;i++) arr[i]=arr[i+1];
+//                 n--;
+//                 break;
+//             case 4:
+//                 display(arr,n);
+//                 break;
+//             case 5:
+//                 printf("Enter value to search: ");
+//                 scanf("%d",&key);
+//                 for(i=0;i<n;i++) {
+//                     if(arr[i]==key) { printf("Found at %d\n",i); break; }
+//                 }
+//                 if(i==n) printf("Not found\n");
+//                 break;
+//             case 6:
+//                 return 0;
+//         }
+//     }
+// }
+
+
+// #include <stdio.h>
+// int sumArray(int arr[], int size) {
+//     int sum = 0;
+//     for(int i=0; i<size; i++)
+//         sum += arr[i];
+//     return sum;
+// }
+// int main() {
+//     int arr[] = {1,2,3,4,5};
+//     printf("Sum: %d\n", sumArray(arr, 5));
+//     return 0;
+// }
+
+
+// #include <stdio.h>
+// void swap(int *a, int *b) {
+//     int temp = *a;
+//     *a = *b;
+//     *b = temp;
+// }
+// int main() {
+//     int x=5, y=10;
+//     printf("Before: x=%d y=%d\n", x, y);
+//     swap(&x, &y);
+//     printf("After: x=%d y=%d\n", x, y);
+//     return 0;
+// }
+
+
+// #include <stdio.h>
+// #define ROW 3
+// #define COL 3
+
+// void multiply(int a[ROW][COL], int b[ROW][COL]) {
+//     int result[ROW][COL] = {0};
+    
+//     for(int i=0; i<ROW; i++)
+//         for(int j=0; j<COL; j++)
+//             for(int k=0; k<COL; k++)
+//                 result[i][j] += a[i][k] * b[k][j];
+                
+//     printf("Product:\n");
+//     for(int i=0; i<ROW; i++) {
+//         for(int j=0; j<COL; j++)
+//             printf("%d ", result[i][j]);
+//         printf("\n");
+//     }
+// }
+
+// int main() {
+//     int a[ROW][COL] = {{1,2,3},{4,5,6},{7,8,9}};
+//     int b[ROW][COL] = {{9,8,7},{6,5,4},{3,2,1}};
+//     multiply(a, b);
+//     return 0;
+// }
+
+#include <stdio.h>
+#include <string.h>
+int main() {
+    char mainString[1000], subString[100];
+    int mainLength, subLength, count = 0;
+     printf("Enter the main string: ");
+    fgets(mainString, sizeof(mainString), stdin);
+    mainLength = strlen(mainString);
+    if (mainLength > 0 && mainString[mainLength-1] == '\n'){
+        mainString[mainLength-1] = '\0';
+        mainLength--; }
+    printf("Enter the substring to search: ");
+    fgets(subString, sizeof(subString), stdin);
+    subLength = strlen(subString);
+    if (subLength > 0 && subString[subLength-1] == '\n'){
+        subString[subLength-1] = '\0';
+        subLength--;  }
+    if(subLength == 0){
+        printf("Substring cannot be empty.\n");
+        return 1; }
+    for (int i = 0; i <= mainLength - subLength; i++) {
+        int j;
+        for (j = 0; j < subLength; j++) {
+            if (mainString[i + j] != subString[j]) {
+                break; }
+        }
+        if (j == subLength) {
+            count++; }
+    }
+     printf("The substring '%s' appears %d times in the main string.\n", subString, count);
+     return 0;}
