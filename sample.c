@@ -767,18 +767,42 @@
 //     return 0;
 // }
 
+// #include <stdio.h>
+// int main(){
+//     int n;
+//     scanf("%d",&n);
+//     if(n%2 ==0 || n%3 ==0 ||n%5 ==0){
+//         printf("not a prime number");
+//     }
+//     else if (n==2){
+//         printf("not a prime number");
+//     }
+//     else{
+//         printf("prime number");
+//     }
+//     return 0;
+// }
+
 #include <stdio.h>
-int main(){
-    int n;
-    scanf("%d",&n);
-    if(n%2 ==0 || n%3 ==0 ||n%5 ==0){
-        printf("not a prime number");
+
+// Recursive function to calculate factorial
+long long factorial(int n) {
+    if (n == 0 || n == 1)
+        return 1;
+    else
+        return n * factorial(n - 1);
+}
+
+int main() {
+    int num;
+    printf("Enter a number to find factorial: ");
+    scanf("%d", &num);
+
+    if (num < 0) {
+        printf("Factorial is not defined for negative numbers.\n");
+    } else {
+        printf("Factorial of %d = %lld\n", num, factorial(num));
     }
-    else if (n==2){
-        printf("not a prime number");
-    }
-    else{
-        printf("prime number");
-    }
+
     return 0;
 }
