@@ -147,41 +147,16 @@
 
 //     return 0;
 // }
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
-
-int main() {
-    char s1[100], s2[100];
-    int c;
-    while (1) {
-        printf("\n1.strlen 2.strcat 3.strcpy 4.strcmp 5.strrev 6.exit\nChoice: ");
-        scanf("%d", &c); getchar();
-        switch (c) {
-            case 1:
-                gets(s1);
-                printf("Length: %lu\n", strlen(s1));
-                break;
-            case 2:
-                gets(s1); gets(s2);
-                strcat(s1, s2);
-                printf("Concatenated: %s\n", s1);
-                break;
-            case 3:
-                gets(s1);
-                strcpy(s2, s1);
-                printf("Copied: %s\n", s2);
-                break;
-            case 4:
-                gets(s1); gets(s2);
-                printf("Compare: %d\n", strcmp(s1, s2));
-                break;
-            case 5:
-                gets(s1);
-                printf("Reversed: %s\n", strrev(s1)); // Use Turbo C
-                break;
-            case 6:
-                exit(0);
-        }
-    }
-}
+// #include<stdio.h>
+// #include<string.h>
+// int main(){
+//     char str[20];
+//     char str2[20];
+//     gets(str);
+//     gets(str2);
+//     printf("the length of the string is :%d\n",strlen(str));
+//     printf("the new string formed after copying the value is %s\n",strcpy(str,str2));
+//     printf("the concatation string is %s\n",strcat(str,str2));
+//     printf("the cimaprsion based on ascii value %d\n",strcmp(str,str2));
+//     printf("the reverse of the string is %s\n",strrev(str));
+// }
